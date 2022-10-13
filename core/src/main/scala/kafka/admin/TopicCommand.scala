@@ -40,7 +40,7 @@ import scala.jdk.CollectionConverters._
 import scala.collection._
 import scala.compat.java8.OptionConverters._
 import scala.concurrent.ExecutionException
-
+// 客户端入口，program arguments 那里需要加上： --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
 object TopicCommand extends Logging {
 
   def main(args: Array[String]): Unit = {

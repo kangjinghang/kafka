@@ -19,6 +19,7 @@ import java.nio.charset.StandardCharsets
 
 buildscript {
   repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
     mavenCentral()
   }
   apply from: "$rootDir/gradle/dependencies.gradle"
@@ -110,6 +111,7 @@ ext {
 allprojects {
 
   repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
     mavenCentral()
   }
 
@@ -839,6 +841,7 @@ project(':core') {
     implementation project(':raft')
     implementation project(':storage')
 
+    implementation libs.slf4jnop
     implementation libs.argparse4j
     implementation libs.jacksonDatabind
     implementation libs.jacksonModuleScala

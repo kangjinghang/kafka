@@ -26,7 +26,7 @@ import kafka.utils.{CommandLineUtils, Exit, Logging}
 import org.apache.kafka.common.utils.{Java, LoggingSignalHandler, OperatingSystem, Time, Utils}
 
 import scala.jdk.CollectionConverters._
-
+// 服务端入口，program arguments 那里需要加上： config/server.properties
 object Kafka extends Logging {
 
   def getPropsFromArgs(args: Array[String]): Properties = {
